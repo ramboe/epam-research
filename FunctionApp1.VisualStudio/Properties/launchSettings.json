@@ -1,9 +1,0 @@
-{
-  "profiles": {
-    "FunctionApp1.VisualStudio": {
-      "commandName": "Project",
-      "commandLineArgs": "--port 7276",
-      "launchBrowser": false
-    }
-  }
-}
