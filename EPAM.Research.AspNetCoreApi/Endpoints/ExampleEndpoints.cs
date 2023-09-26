@@ -6,7 +6,7 @@ public class ExampleEndpoints : IEndpoints
     {
         public static void DefineEndpoints(IEndpointRouteBuilder app)
         {
-            app.MapGet("/", () => "what makes you think I'm not in love?");
+            app.MapGet("/", () => "what makes you think I'm not in love? Cause I thought, you wanted to dance");
             app.MapGet("/stuff", doStuff);
         }
 
