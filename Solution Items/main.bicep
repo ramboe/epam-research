@@ -1,4 +1,4 @@
-//comment for testing
+//comment 2
 param prefix string
 
 resource apiManagementInstance 'Microsoft.ApiManagement/service@2021-08-01' existing = {
