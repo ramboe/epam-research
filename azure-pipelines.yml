@@ -1,7 +1,12 @@
 # ASP.NET Core
 
 trigger:
-- master
+  branches:
+    exclude:
+      - '*'
+  paths:
+    include:
+      - EPAM.Research.AspNetCoreApi/*
 
 pool:
   vmImage: ubuntu-latest
