@@ -4,7 +4,7 @@ trigger:
       - master
   paths:
     include:
-      - '/Solution Items/main.bicep'
+      - SolutionItems/main.bicep
 
 name: Deploy Bicep files
 
@@ -14,7 +14,7 @@ variables:
   azureServiceConnection: 'Visual Studio Enterprise (865900f2-87ff-4906-8a58-102b67d6abac)'
   resourceGroupName: 'bicep-example'
   location: 'switzerlandnorth'
-  templateFile: '/Solution Items/main.bicep'
+  templateFile: SolutionItems/main.bicep
 pool:
   vmImage: $(vmImageName)
 
