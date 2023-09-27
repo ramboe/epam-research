@@ -5,10 +5,10 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPAM.Research.AspNetCoreApi", "EPAM.Research.AspNetCoreApi\EPAM.Research.AspNetCoreApi.csproj", "{AEF1CA62-69A2-4D1D-9D83-025B31EC4265}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{62229754-1098-4ABC-B211-AC1B93EB7BC6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{689799DD-862E-4015-973A-F1A2C51C2A18}"
 	ProjectSection(SolutionItems) = preProject
-		Solution Items\main.bicep = Solution Items\main.bicep
-		Solution Items\webapp.bicep = Solution Items\webapp.bicep
+		SolutionItems\main.bicep = SolutionItems\main.bicep
+		SolutionItems\webapp.bicep = SolutionItems\webapp.bicep
 	EndProjectSection
 EndProject
 Global
