@@ -4,7 +4,7 @@ trigger:
       - master
   paths:
     include:
-      - /Solution Items/main.bicep
+      - '/Solution Items/main.bicep'
 
 name: Deploy Bicep files
 
