@@ -28,4 +28,4 @@ steps:
     inlineScript: |
       az --version
       az group create --name $(resourceGroupName) --location $(location)
-      az deployment group create --resource-group $(resourceGroupName) --template-file $(templateFile) --parameters prefix='from-azure-devops'
+      az deployment group create --resource-group $(resourceGroupName) --template-file $(templateFile) --parameters prefix='from-azure-devops' location=switzerlandnorth
