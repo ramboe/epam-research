@@ -1,0 +1,31 @@
+trigger:
+  branches:
+    include:
+      - master
+  paths:
+    include:
+      - '/Solution Items/main.bicep'
+
+name: Deploy Bicep files
+
+variables:
+  vmImageName: 'ubuntu-latest'
+
+  azureServiceConnection: 'Visual Studio Enterprise (865900f2-87ff-4906-8a58-102b67d6abac)'
+  resourceGroupName: 'bicep-example'
+  location: 'switzerlandnorth'
+  templateFile: '/Solution Items/main.bicep'
+pool:
+  vmImage: $(vmImageName)
+
+steps:
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: $(azureServiceConnection)
+    scriptType: bash
+    scriptLocation: inlineScript
+    useGlobalConfig: false
+    inlineScript: |
+      az --version
+      az group create --name $(resourceGroupName) --location $(location)
+      az deployment group create --resource-group $(resourceGroupName) --template-file $(templateFile) --parameters prefix='from-azure-devops'
