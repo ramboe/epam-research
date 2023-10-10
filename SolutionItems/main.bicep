@@ -4,6 +4,7 @@ param tier string = 'Consumption'
 param capacity int = 0 //needed for the consumption tier to work
 param serviceUrl string = 'https://web-app-created-with-bicep.azurewebsites.net/'
 
+//
 // use case: create brand new apim
 
 // resource apiManagementInstance 'Microsoft.ApiManagement/service@2021-08-01' = {
