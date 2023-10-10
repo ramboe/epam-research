@@ -2,6 +2,8 @@ using Ramboe.MinimalApis;
 
 var builder = WebApplication.CreateBuilder(args);
 
+//dunno
+
 //endpoints
 var isDev = builder.Environment.IsDevelopment();
 builder.Services.AddEndpoints<Program>(builder.Configuration, isDev);
