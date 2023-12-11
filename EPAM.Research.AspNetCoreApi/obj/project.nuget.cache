@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2IjHwuIY0/iUl6ioZ0ovJk+FgNrhq4ykouXw56ETbk8c9msAgk6Jtdu4eCine1E6FoCf20lN2RZeD7EXvdYvmw==",
+  "dgSpecHash": "yZD3ncB65wKmB2Kq/s7ybQtFLPUuVDjElt5KL6jHym02355VguBAPs9khBoaKZOHSfr6yDm6ZBd8FqLFOxKfkA==",
   "success": true,
   "projectFilePath": "C:\\Users\\lkajd\\RiderProjects\\EPAM.Research\\EPAM.Research.AspNetCoreApi\\EPAM.Research.AspNetCoreApi.csproj",
   "expectedPackageFiles": [
@@ -15,7 +15,11 @@
     "C:\\Users\\lkajd\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "C:\\Users\\lkajd\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "C:\\Users\\lkajd\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
-    "C:\\Users\\lkajd\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+    "C:\\Users\\lkajd\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
+    "C:\\Users\\lkajd\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\lkajd\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\lkajd\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\lkajd\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.14\\microsoft.netcore.app.host.win-x64.7.0.14.nupkg.sha512"
   ],
   "logs": []
 }
