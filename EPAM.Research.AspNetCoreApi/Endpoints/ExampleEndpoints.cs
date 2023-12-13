@@ -1,4 +1,6 @@
-﻿using System.Text.Json;
+﻿using System.IO;
+using System.Text;
+using System.Text.Json;
 using EPAM.Research.AspNetCoreApi.Models;
 using EPAM.Research.AspNetCoreApi.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -26,18 +28,32 @@ public class ExampleEndpoints : IEndpoints
         //services that these endpoints require
     }
 
-    static IResult postStuff(HttpContext context, RequestCounter requestCounter, [FromBody] PostModel model)
+    async static Task<IResult> postStuff(HttpContext context, RequestCounter requestCounter, PostModel model)
     {
-        var modelAsString = JsonSerializer.Serialize(model);
+        https://markb.uk/asp-net-core-read-raw-request-body-as-string.html
+        context.Request.EnableBuffering();
 
-        requestCounter.Posts.Add(modelAsString);
+        using var reader = new StreamReader(context.Request.Body);
+        var body = await reader.ReadToEndAsync();
 
-        return Results.Created("/", modelAsString);
+        context.Request.Body.Position = 0;
+
+        using var reader2 = new StreamReader(context.Request.Body);
+
+        var secondString = await reader2.ReadToEndAsync();
+
+        var item = body + ", " + secondString.Length;
+        requestCounter.Posts.Add(item);
+        
+        context.Request.Body.Position = 0;
+
+        return Results.Created("/", item);
     }
 
-    static IResult doStuff(HttpContext context)
+    static async Task<IResult> doStuff(HttpContext context)
     {
-        var body = context.Request.Body.ToString();
+        using var reader = new StreamReader(context.Request.Body);
+        var body = await reader.ReadToEndAsync();
 
         return Results.Ok(body);
     }
