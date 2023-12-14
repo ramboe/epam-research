@@ -13,6 +13,8 @@ builder.Services.AddEndpoints<Program>(builder.Configuration, isDev);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<RequestCounter>();
+builder.Services.AddApplicationInsightsTelemetry();
+
 
 
 var app = builder.Build();

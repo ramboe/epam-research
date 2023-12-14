@@ -28,7 +28,7 @@ public class ExampleEndpoints : IEndpoints
         //services that these endpoints require
     }
 
-    async static Task<IResult> postStuff(HttpContext context, RequestCounter requestCounter, PostModel model)
+    async static Task<IResult> postStuffBuffering(HttpContext context, RequestCounter requestCounter, PostModel model)
     {
         https://markb.uk/asp-net-core-read-raw-request-body-as-string.html
         context.Request.EnableBuffering();
@@ -44,8 +44,19 @@ public class ExampleEndpoints : IEndpoints
 
         var item = body + ", " + secondString.Length;
         requestCounter.Posts.Add(item);
-        
+
         context.Request.Body.Position = 0;
+
+        return Results.Created("/", item);
+    }
+
+    async static Task<IResult> postStuff(ILogger<ExampleEndpoints> logger, HttpContext context, RequestCounter requestCounter, PostModel model)
+    {
+        var item = JsonSerializer.Serialize(model);
+
+        logger.LogTrace($"FROM appsvc: {item}");
+
+        requestCounter.Posts.Add(item);
 
         return Results.Created("/", item);
     }
